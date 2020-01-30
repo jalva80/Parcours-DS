@@ -1,0 +1,7 @@
+Description des catégories -
+	0 - petits clients perdus
+	1 - peu de cdes, pttes qtés, ptts montants
+	2 - Peu de commandes, quantités et montants moyens
+	3 - clients perdus, mais qui avaient commandés des produits relativement chers
+	4 - peu de commandes, avec quantités et montant relativement élevés
+	5 - clients pros - bcp de cdes, de ref, de qtés, montant total élevé

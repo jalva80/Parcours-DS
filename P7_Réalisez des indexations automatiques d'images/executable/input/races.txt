@@ -1,0 +1,3 @@
+img1	papillon
+img2	japanese spaniel
+img3	afghan hound

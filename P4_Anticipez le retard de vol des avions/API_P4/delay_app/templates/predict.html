@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>J Alvarez - DS - P4</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  </head>
+  <body>
+    <div>
+      <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <TABLE>
+          <CAPTION>Veuillez saisir les données de votre vol:</CAPTION>
+          <TR>
+            <TH>{{ form.date_vol.label }}</TH>
+            <TD>{{ form.date_vol(type="date") }}</br>
+              {% for error in form.date_vol.errors %}
+                <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </TD>
+          </TR>
+          <TR>
+            <TH>{{ form.heure_vol.label }}</TH>
+            <TD>{{ form.heure_vol(type="time") }}</br>
+              {% for error in form.heure_vol.errors %}
+                <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </TD>
+          </TR>
+          <TR>
+            <TH>{{ form.cie_id.label }}</TH>
+            <TD>{{ form.cie_id() }}
+              {% for error in form.cie_id.errors %}
+                <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </TD>
+          </TR>
+          <TR>
+            <TH>{{ form.dep_id.label }}</TH>
+            <TD>{{ form.dep_id() }}
+              {% for error in form.dep_id.errors %}
+                <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </TD>
+          </TR><TR>
+            <TH>{{ form.arr_id.label }}</TH>
+            <TD>{{ form.arr_id() }}
+              {% for error in form.arr_id.errors %}
+                <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </TD>
+          </TR>
+        </TABLE>
+
+        <p class="centerButtons">{{ form.submit() }}</p>
+      </form>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+      {% endwith %}
+    </div>
+  </body>
+</html>

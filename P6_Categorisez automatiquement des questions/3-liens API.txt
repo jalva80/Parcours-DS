@@ -1,0 +1,5 @@
+Adresse de l'API déployée sur Heroku:
+https://oc-jalvarez-p6.herokuapp.com/
+
+Le code de l'API est disponible sur Github à l'adresse :
+https://github.com/jalva80/OC_DS_P6

@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>J Alvarez - DS - P6</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  </head>
+  <body>
+    <div>
+      <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <TABLE>
+          <CAPTION>Nouveau message</CAPTION>
+          <TR>
+            <TH>{{ form.title_raw.label }}</TH>
+            <TD>{{ form.title_raw(type="string", cols="60", rows="2") }}</br>
+              {% for error in form.title_raw.errors %}
+                <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </TD>
+          </TR>
+          <TR>
+            <TH>{{ form.body_raw.label }}</TH>
+            <TD>{{ form.body_raw(type="string", cols="60", rows="10") }}</br>
+              {% for error in form.body_raw.errors %}
+                <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </TD>
+          </TR>
+        </TABLE>
+
+        <p class="centerButtons">{{ form.submit() }}</p>
+      </form>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+      {% endwith %}
+    </div>
+  </body>
+</html>
