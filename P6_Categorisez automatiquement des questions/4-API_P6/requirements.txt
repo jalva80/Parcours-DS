@@ -20,7 +20,7 @@ bs4 == 0.0.1
 joblib == 0.13.0
 
 # label_app\utils.py: 7,8,9
-nltk == 3.4.4
+nltk == 3.4.5
 
 # label_app\utils.py: 3
 numpy == 1.15.0
