@@ -17,7 +17,7 @@ WTForms == 2.2.1
 WTForms_Components == 0.10.3
 
 # delay_app\utils.py: 5
-joblib == 0.13.0
+joblib == 1.2.0
 
 # delay_app\utils.py: 3
 numpy == 1.15.0
